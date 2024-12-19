@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse - OVERWATCH</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Fade-in animation for body */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #2a2a3b;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            animation: slideUp 1s ease-out;
+        }
+
+        /* Slide-up animation for the container */
+        @keyframes slideUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .thumbnail {
+            text-align: center;
+            animation: zoomIn 1.5s ease-out;
+        }
+
+        /* Zoom-in animation for the thumbnail */
+        @keyframes zoomIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .thumbnail img {
+            max-width: 40%;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 20px 0;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Fade-in-up animation for the title */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.8;
+            color: #ccc;
+            text-align: center;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #4A90E2, #6CB1FF);
+            color: #fff;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+            animation: bounce 2s infinite;
+        }
+
+        /* Bounce animation for the button */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .back-button:hover {
+            background: linear-gradient(90deg, #357ABD, #4A90E2);
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Thumbnail Section -->
+    <div class="thumbnail">
+        <a href="https://www.minecraft.net/en-us" target="_blank">
+            <img src="../foto/minecraft.jpg" alt="Minecraft Thumbnail">
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>MINECRAFT</h1>
+        <p>Minecraft adalah permainan video sandbox yang dikembangkan oleh Mojang Studios, menawarkan kebebasan kreatif tanpa batas bagi pemain. Dalam game ini, pemain dapat menjelajahi dunia blok-blok yang dihasilkan secara acak, mengumpulkan sumber daya, membuat alat, membangun struktur, dan menghadapi berbagai makhluk. 
+            Terdapat beberapa mode, termasuk Survival di mana pemain harus bertahan hidup dengan mengelola kesehatan dan sumber daya, serta Creative yang memberikan akses tak terbatas untuk membangun tanpa batasan. Minecraft juga mendukung modifikasi dan multipemain, memungkinkan kolaborasi dalam proyek besar atau petualangan bersama.
+             Dengan gaya visual retro dan gameplay yang fleksibel, Minecraft telah menjadi fenomena global yang cocok untuk segala usia, merangsang kreativitas, dan menciptakan komunitas yang besar dan beragam.</p>
+        <h2 style="text-align: center; font-weight: bold; color: #fff;">
+            "Jika ingin mendownload game ini, pencet saja gambar yang di atas karena langsung otomatis ke halaman website resmi nya"
+        </h2>
+        <div style="margin-top: 20px; text-align: center;">
+            <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/gJWWDDiL714" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+        </div>
+        <a href="../index.html" class="back-button">Kembali ke Beranda</a>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p id="greeting"></p>
+        <p id="current-time"></p>
+        <p>&copy; 2024 Game Hub. All Rights Reserved.</p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/arinnn966/" target="_blank">Instagram</a> |
+            <a href="https://www.tiktok.com/@rusadong" target="_blank">Tiktok</a>
+        </p>
+    </div>
+
+    <script>
+        // Script for dynamic greeting and time
+        function updateTimeAndGreeting() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const currentTime = `${hours}:${minutes}:${seconds}`;
+
+            const greeting =
+                hours < 12 ? 'Good Morning!' :
+                hours < 18 ? 'Good Afternoon!' : 'Good Evening!';
+
+            document.getElementById('greeting').textContent = greeting;
+            document.getElementById('current-time').textContent = `Current Time: ${currentTime}`;
+        }
+
+        // Update every second
+        setInterval(updateTimeAndGreeting, 1000);
+    </script>
+</body>
+</html>

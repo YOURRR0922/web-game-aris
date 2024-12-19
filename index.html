@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+         /* Reset margin dan padding */
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Header styling */
+        .header {
+            background: linear-gradient(90deg, #4A90E2, #6CB1FF);
+            color: #fff;
+            padding: 2em 1em;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        .header h1 {
+            margin-bottom: 0.3em;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation bar styling */
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5em;
+            margin-top: 1em;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.7em 1.5em;
+            background: linear-gradient(90deg, #357ABD, #4A90E2);
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            background: linear-gradient(90deg, #4A90E2, #6CB1FF);
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Main content area */
+        .main {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 2em;
+            background: #2a2a3b;
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .main h2 {
+            font-size: 2em;
+            margin-bottom: 1em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .main img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1em;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .main p {
+            margin-top: 1em;
+            color: #ccc;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+              /* Container utama */
+   .video-grid {
+    display: flex; /* Menggunakan Flexbox */
+    flex-wrap: wrap; /* Membungkus konten ke baris baru jika melebihi lebar */
+    justify-content: center; /* Rata tengah secara horizontal */
+    gap: 20px; /* Jarak antar item */
+    padding: 20px;
+}
+
+/* Video Card Style */
+.video-card {
+    text-align: center; /* Teks dan gambar rata tengah */
+    background-color: #1e1e2d; /* Warna latar belakang */
+    border-radius: 10px; /* Membuat sudut melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+    width: 200px; /* Lebar masing-masing item */
+    padding: 10px;
+    transition: transform 0.3s ease; /* Efek hover */
+}
+
+.video-card img {
+    max-width: 100%;
+    border-radius: 8px; /* Membuat sudut gambar melengkung */
+}
+
+.video-card:hover {
+    transform: scale(1.05); /* Efek zoom saat dihover */
+}
+
+.video-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+  
+
+
+        /* Footer styling */
+        .footer {
+            background: linear-gradient(90deg, #4A90E2, #357ABD);
+            color: #fff;
+            text-align: center;
+            padding: 1.5em;
+            margin-top: 2em;
+            font-size: 0.9em;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            text-decoration: none;
+            color: #dfe6ed;
+        }
+
+        /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+            .header {
+                padding: 1em;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 0.5em;
+            }
+
+            .nav a {
+                padding: 0.5em 1em;
+                font-size: 0.9em;
+            }
+
+            .main {
+                padding: 1em;
+                border-radius: 10px;
+            }
+
+            .main h2 {
+                font-size: 1.5em;
+            }
+
+            .main p {
+                font-size: 1em;
+            }
+
+            .footer {
+                padding: 1em;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>GameVerse</h1>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main">
+        <h2>Beranda</h2>
+        <img src="foto/game1.jpg" alt="Gaming Setup">
+        <p>
+            Selamat Datang di GameVerse! <br>
+            GameVerse adalah sumber terpercaya untuk berita, ulasan, panduan, dan komunitas seputar dunia game. 
+            Temukan informasi terbaru tentang game favorit Anda, mulai dari rilis terbaru, tips bermain, hingga turnamen esports terkini.
+        </p>
+        <div class="video-grid">
+            <div class="video-card" onclick="goToValorantPage()">
+                <img src="foto/valo.jpg" alt="Valorant Thumbnail">
+                <h3>VALORANT</h3>
+            </div>
+            <div class="video-card" onclick="goTodotaPage()">
+                <img src="foto/dota.jpg" alt="Dota 2 Thumbnail">
+                <h3>DOTA 2</h3>
+            </div>
+            <div class="video-card" onclick="goToapexPage()">
+                <img src="foto/apex.jpg" alt="Apex Legends Thumbnail">
+                <h3>APEX LEGENDS</h3>
+            </div>
+            <div class="video-card" onclick="goTocsgoPage()">
+                <img src="foto/sc go.jpg" alt="CS GO Thumbnail">
+                <h3>COUNTER STRIKE</h3>
+            </div>
+            <div class="video-card" onclick="goTopubgPage()">
+                <img src="foto/pubg.jpg" alt="PUBG Thumbnail">
+                <h3>PUBG</h3>
+            </div>
+            <div class="video-card" onclick="goToleaguePage()">
+                <img src="foto/LOL.jpg" alt="League of Legends Thumbnail">
+                <h3>LEAGUE OF LEGENDS</h3>
+            </div>
+            <div class="video-card" onclick="goTooverwatchPage()">
+                <img src="foto/Overwatch.jpg" alt="Overwatch Thumbnail">
+                <h3>OVERWATCH</h3>
+            </div>
+            <div class="video-card" onclick="goTorainbowPage()">
+                <img src="foto/rainbow.jpg" alt="Rainbow Thumbnail">
+                <h3>RAINBOWSIX SIEGE</h3>
+            </div>
+            <div class="video-card" onclick="goTominecraftPage()">
+                <img src="foto/minecraft.jpg" alt="Minecraft Thumbnail">
+                <h3>MINECRAFT</h3>
+            </div>
+            <div class="video-card" onclick="goTodeltaforcePage()">
+                <img src="foto/battle.jpg" alt="Delta force Thumbnail">
+                <h3>DELTA FORCE</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p id="greeting"></p>
+        <p id="current-time"></p>
+        <p>&copy; 2024 Game Hub. All Rights Reserved.</p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/arinnn966/" target="_blank">Instagram</a> |
+            <a href="https://www.tiktok.com/@rusadong" target="_blank">Tiktok</a>
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
